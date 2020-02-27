@@ -1,0 +1,226 @@
+body{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(194, 194, 194);
+}
+header{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 11vh;
+    background: url("picture/user/header.jpg");
+    background-size: cover;
+    background-position: left;
+    border-bottom: skyblue solid;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+header button{
+    margin-left: 1px;
+    background: none;
+    background-size: cover;
+    width: 25vw;
+    height: 11vh;
+    border: none;
+    font-variant: small-caps;
+    font-size: 5vh;
+    cursor: pointer;
+    outline: none;
+}
+/* //////////////////////// */
+.sidebar{
+    display: none;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    z-index: 5;
+    margin-top: 12vh;
+    width: 25vw;
+    height: 70vh;
+    border-left: none;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background-color: rgb(78, 72, 58);
+    animation: appear 0.3s ease-in-out;
+}
+.sidebar .items{
+    border-top: whitesmoke solid 20px ;
+    border-bottom: whitesmoke solid 20px ;
+    height: 20vh;
+    min-height: 150px;
+    width: 100%;
+    background-color: rgb(77, 77, 77);
+    color:  rgb(233, 233, 233);;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    font-style: italic;
+    font-size: 23px;
+    padding-top: 35px;
+    text-align: center;
+}
+.sidebar .items .plus-btn,
+.sidebar .items .minus-btn{
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px;
+}
+.sidebar .items .plus-btn:hover,
+.sidebar .items .minus-btn:hover{
+    color: skyblue;
+}
+.sidebar .items .remove-btn{
+    font-size: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.sidebar .items .remove-btn:hover{
+    background-color: rgb(241, 125, 125);
+    border-radius: 50px;
+}
+.sidebar .sum{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 14vh;
+    min-height: 100px;
+    background-color: rgba(77, 77, 77, 0.9);
+    border-top: wheat solid;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    bottom: 0;
+    color: whitesmoke;
+    text-align: center;
+    animation: sum 0.3s linear;
+    
+}
+.sidebar .sum p{
+    margin-top: 1vh;
+    font-size: 20px;
+}
+.sidebar .sum span{
+    font-size: 30px;
+}
+.sidebar .sum button{
+    color: slategrey;
+    font-size: 25px;
+    font-weight: 200;
+    z-index: 100;
+    border: none;
+    border-radius: 50px;
+    margin-bottom: 0;
+}
+.sidebar .sum button:hover{
+    background-color: skyblue;
+    font-weight: 500;
+}
+/* //////////////////////// */
+.page-one{
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background: url("picture/user/page-one.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    right: 0px;
+}
+/* //////////////////////// */
+.page-middle{
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    background: url("picture/user/middle4.jpg");
+    background-size: cover;
+}
+.page-middle p{
+    top: 50%;
+    transform: translateY(-100%);
+    position: absolute;
+    /* border: solid aqua; */
+    color: aliceblue;
+    font-size: 50px;
+}
+/* //////////////////////// */
+.page-two{
+    background: url("picture/user/middle3.jpg");
+    background-size: cover;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(298px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 100px;
+}
+.page-two .product{
+    position: relative;
+    border: wheat solid;
+    font-size: 25px;
+    font-weight: 200;
+    padding-bottom: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin: 20px 20px 20px 20px;
+}
+.page-two .product span{
+    font-size: 30px;
+    color: slategrey;
+}
+.page-two button{
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    border-radius: 20px;
+}
+.page-two button:hover{
+    background-color: yellowgreen;
+}
+/* //////////////////////// */
+.appear{
+    display: unset;
+}
+.newPage{
+    width: 75%;
+    transform: translateX(25vw);
+    animation: page-appear 0.2s linear;
+}
+/* //////////////////////// */
+@keyframes appear{ 
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes sum{
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+@keyframes page-appear{
+    0%{
+        transform: translateX(0);
+        width: 100%;
+    }
+    100%{
+        transform: translateX(20%);
+        width: 100%;
+    }
+}

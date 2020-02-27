@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Page</title>
+        <link rel="stylesheet" href="/assets/registration.css">
+    </head>
+    <body>
+        <div class="container">
+            <form id="registration" method="POST" >
+                <label for="account">Account:</label>
+                <input name="account" type="text" required autocomplete="off"
+                value>
+                <label for="passport">Passport:</label>
+                <input name="passport" type="password" required autocomplete="off">
+                <label for="confirm">Confirm:</label>
+                <input type="password" name="confirm" required autocomplete="off">
+                <input class="submitBtn" type="submit" value="Submit">
+            </form>
+            <div class="info">
+                <%= data[0] %>
+            </div>
+            <div class="info2">
+                <%= data[1] %>
+            </div>
+        </div>
+        <script>
+        </script>
+        <!-- <script>
+            const account = document.getElementsByTagName("input")[0];
+            const passport = document.getElementsByTagName("input")[1];
+            const confirm = document.getElementsByTagName("input")[2];
+            const submit = document.querySelector(".submitBtn");
+            const info = document.querySelector(".info");
+            submit.addEventListener("click", async ()=>{
+                if(account.value === "" || passport.value === "" || confirm === ""){
+                    info.innerHTML = "Please complete the form to get account";
+                    info.style = "color:tomato";
+                } else if (passport.value.length < 8){
+                    info.innerHTML = "The length of passport can not less than 8";
+                    info.style = "color:tomato";
+                } else if(passport.value !== confirm.value){
+                    info.innerHTML = "The confirm is diffrent from passport";
+                    info.style = "color:tomato";
+                } else{
+                    info.innerHTML = "Successful!!!";
+                    info.style = "color:yellowgreen";
+                    console.log(account.value);
+                    const data = {
+                    "account": account.value,
+                    "passport": passport.value,
+                    "comfirm": confirm.value
+                    }
+                    const sendData = {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(data)
+                    }
+                    await fetch("/registration",sendData);
+                    }
+
+                // .then((res)=>{
+                //     console.log(res);
+                // });
+            });
+
+        </script> -->
+    </body>
+</html>

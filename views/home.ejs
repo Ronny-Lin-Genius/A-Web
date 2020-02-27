@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tech Learning</title>
+        <link rel="stylesheet" href="assets/home.css">
+        <link rel="icon" type="image/jpg" href="assets/picture/favicon.png">
+    </head>
+    <body>
+        <%- include("partials/header") %>
+        <main class="container">
+            <form method="POST" action="home">
+                <div class="account">
+                    <input type="text" name="account" autocomplete="off" required>
+                    <label class="a"><span>Account</span></label>
+                </div>
+                <div class="passport">
+                    <input type="password" name="passport" autocomplete="off" required>
+                    <label class="p"><span>Passport</span></label>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Log In">
+                </div>
+                <div class="registration">
+                    <p>don't have account yet ?
+                        <br>
+                        <a href="http://127.0.0.1:3002/registration">click here</a>
+                        registrate right now 
+                    </p>
+                </div>
+            </form>
+        </main>
+        <%- include("partials/footer.ejs") %> 
+        <script src="assets/javascript.js"></script>
+    </body>
+</html>

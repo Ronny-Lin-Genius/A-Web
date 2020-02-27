@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tech Shop</title>
+    <link rel="stylesheet" href="assets/user.css">
+</head>
+<body>
+    <header>
+        <button></button>
+    </header>
+    <div class="sidebar">
+        <div class="sum">
+            <p> 
+                Totally: 
+                $<span>40</span><br>
+            </p>
+            <button>Pay now</button>
+        </div>
+    </div>
+    <section class="page-one">
+    </section>
+    <section class="page-middle">
+        <p>Shopping to reach your amittion now!!</p>
+    </section>
+    <section class="page-two">
+        <% for(let i = 0; i < data.length; i++){ %>
+        <div class="product">
+            <img style="width: 100%;" src= <%= data[i].image %>>
+            Item Name: <span class="name"><%= data[i].name%></span><br>
+            Price: <span class="price">$<%= data[i].price %></span></span><br>
+            Describtion: <span class="describtion"><%= data[i].description %></span ><br>
+            <button>Add</button>    
+        </div>
+        <% } %>
+    </section>
+    <script src="assets/user.js"></script>
+</body>
+</html>

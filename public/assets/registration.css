@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/assets/picture/office.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    justify-content: center;
+}
+
+body .container{
+    width: 400px;
+    height: 400px;
+    border: white solid;
+    border-radius: 10px;
+    margin-top: 10vh;
+    /* justify-items: center; */
+    /* transform: translateX(50%); */
+}
+.container .info{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-style: italic;
+    color: greenyellow;
+    background-color: honeydew;
+}
+.container .info2{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-style: italic;
+    color: red;
+    background-color: honeydew;
+}
+.container #registration{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: white solid;
+    border-radius: 10px;
+    margin-top: 20vh;
+}
+body .container #registration input{
+    font-size: 25px;
+    font-weight: 300;
+    font-style: italic;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+body .container #registration label::before{
+    position: absolute;
+    content: "";
+    height: 35px;
+    width: 35px;
+    left: 0;
+    transform: translateY(42%) translateX(135%);
+    background-color: white;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.submitBtn{
+    margin-top: 30px;
+    background: white;
+}
+.submitBtn:hover{
+    color: white;
+    background-color: greenyellow;
+}
